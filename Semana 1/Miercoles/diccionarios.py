@@ -34,3 +34,7 @@ print(f'get -> {persona.get("edad")}')
 # pop -> eliminar una clave con su valor
 persona.pop('especialidades')
 print(f'pop -> {persona}')
+
+# update -> actualizar un diccionario
+persona.update({ "hobbies": ["jugar partido"] })
+print(f'update -> {persona}')
