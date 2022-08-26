@@ -5,3 +5,4 @@
 CREATE DATABASE nombre_bd;
 ```
 
+[- Comandos y Tipos de datos](PGSQL.md)
