@@ -8,7 +8,7 @@
 - Optimizar el espacio que consume cada dato (fila)
 - Prevenir que se elimine información indeseada
 
-# DDL
+# DDL - DML
 ## Insert
 ```
 -----------------------------------------------------------------------------------
@@ -30,5 +30,30 @@ INSERT INTO customer (name, area_id) VALUES
 ('Jose Arriola', 1), ('Roberto Quiroga', 2), ('Joseph Flores', 3), 
 ('Yesica Chui', 4), ('Germania Toro', NULL);
 
+-- WHERE - Condición para menciona que valor traer
+-- WHERE -> IN , se usa mas de un valor 
+
+-- UPDATE - NO OLVIDAR EL WHERE !!!
+UPDATE area SET name='Recursos Humanos' WHERE id=5;
+
+-- DELETE - NO OLVIDAR EL WHERE !!!
+DELETE FROM area WHERE id=6;
+
+-- SELECT
+-- WHERE -> AND OR
+-- GROUP BY
+-- ORDER BY
+SELECT * FROM customer;
+
+-- JOINS
+-- INNER JOIN -> Intersección
+SELECT 
+	c.id as customer_id,
+	c.name as customer_name,
+	-- a.id as area_id,
+	a.name as area_name
+FROM customer c
+INNER JOIN area a 
+ON c.area_id = a.id;
 
 ```
