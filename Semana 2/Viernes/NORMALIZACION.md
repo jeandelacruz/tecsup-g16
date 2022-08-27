@@ -56,4 +56,34 @@ FROM customer c
 INNER JOIN area a 
 ON c.area_id = a.id;
 
+-- LEFT JOIN -> Todo lo que esta en la izquierda y lo que esta en la intersección
+SELECT * 
+FROM customer c 
+LEFT JOIN area a 
+ON c.area_id = a.id;
+
+-- RIGHT JOIN -> Todo lo que esta en la derecha y lo que esta en la intersección
+SELECT * 
+FROM customer c 
+RIGHT JOIN area a 
+ON c.area_id = a.id;
+
+-- FULL JOIN - FULL OUTER JOIN
+SELECT *
+FROM customer c 
+FULL JOIN area a 
+ON c.area_id = a.id;
+
+-- CASE
+SELECT 
+	c.name as cliente,
+	COALESCE(a.name, 'Sin area')
+--	CASE WHEN a.name IS NULL
+--		THEN 'Sin area'
+--		ELSE a.name
+--	END as area
+FROM customer c 
+LEFT JOIN area a 
+ON c.area_id = a.id;
+
 ```
